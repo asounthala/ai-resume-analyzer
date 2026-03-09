@@ -15,6 +15,7 @@ export default function Home() {
 	const [jobDescription, setJobDescription] = useState("");
 	const [result, setResult] = useState<AnalysisResult | null>(null);
 	const [loading, setLoading] = useState(false);
+	const [progress, setProgress] = useState(0);
 	const [error, setError] = useState("");
 	const [fileName, setFileName] = useState("");
 	const fileInputRef = useRef<HTMLInputElement>(null);
@@ -58,6 +59,17 @@ export default function Home() {
 		setLoading(true);
 		setError("");
 		setResult(null);
+		setProgress(0);
+
+		const interval = setInterval(() => {
+			setProgress((prev) => {
+				if (prev >= 99) {
+					clearInterval(interval);
+					return 99;
+				}
+				return Math.min(prev + Math.random() * 15, 99);
+			});
+		}, 400);
 
 		try {
 			const response = await fetch("/api/analyze", {
@@ -98,7 +110,8 @@ export default function Home() {
 						AI Resume Analyzer
 					</h1>
 					<p className="text-gray-400">
-						Upload your resume. Paste the job description. Get instant feedback on how well you match and how to improve!
+						Upload your resume. Paste the job description. Get instant feedback
+						on how well you match and how to improve!
 					</p>
 				</div>
 
@@ -153,6 +166,22 @@ export default function Home() {
 				>
 					{loading ? "Analyzing..." : "Analyze Resume"}
 				</button>
+
+				{/* Progress Bar */}
+				{loading && (
+					<div className="mb-8">
+						<div className="flex justify-between text-xs text-gray-500 mb-1">
+							<span>Analyzing with Claude...</span>
+							<span>{Math.round(progress)}%</span>
+						</div>
+						<div className="w-full bg-gray-800 rounded-full h-1.5">
+							<div
+								className="h-1.5 rounded-full bg-blue-500 transition-all duration-300"
+								style={{ width: `${progress}%` }}
+							/>
+						</div>
+					</div>
+				)}
 
 				{/* Error */}
 				{error && (
