@@ -102,7 +102,7 @@ export default function Home() {
 		return "bg-red-400";
 	};
 	return (
-		<main className="min-h-screen bg-gray-950 text-gray-100 p-8">
+		<main className="min-h-screen bg-gray-900 text-gray-100 p-8">
 			<div className="max-w-4xl mx-auto">
 				{/* Header */}
 				<div className="mb-10">
@@ -193,6 +193,7 @@ export default function Home() {
 				{/* Results */}
 				{result && (
 					<div className="space-y-6">
+                    
 						{/* Score Card */}
 						<div className="bg-gray-900 border border-gray-700 rounded-xl p-6">
 							<h2 className="text-lg font-semibold text-gray-300 mb-4">
@@ -224,7 +225,7 @@ export default function Home() {
 								<ul className="space-y-2">
 									{result.strengths.map((s, i) => (
 										<li key={i} className="text-gray-300 text-sm">
-											{s}
+											{"✅ " + s}
 										</li>
 									))}
 								</ul>
@@ -237,7 +238,7 @@ export default function Home() {
 								<ul className="space-y-2">
 									{result.gaps.map((g, i) => (
 										<li key={i} className="text-gray-300 text-sm">
-											{g}
+											{"❌ " + g}
 										</li>
 									))}
 								</ul>
@@ -250,7 +251,7 @@ export default function Home() {
 								<ul className="space-y-2">
 									{result.suggestions.map((s, i) => (
 										<li key={i} className="text-gray-300 text-sm">
-											{s}
+											{"→ " + s}
 										</li>
 									))}
 								</ul>

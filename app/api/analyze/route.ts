@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
         messages: [
             {
                 role: "user",
-                content: `You are an expert resume coach and hiring consultant. Analyze the following resume against the job description and return ONLY a JSON object with no markdown formatting or code blocks.
+                content: `You are an expert resume coach and hiring consultant. Analyze the following resume against the job description and return ONLY a JSON object with no markdown formatting or code blocks. Be friendly and concise, but provide specific feedback. The JSON must have the following structure:
 
     The JSON must follow this exact structure:
     {
