@@ -63,13 +63,13 @@ export default function Home() {
 
 		const interval = setInterval(() => {
 			setProgress((prev) => {
-				if (prev >= 99) {
+				if (prev >= 95) {
 					clearInterval(interval);
-					return 99;
+					return 95;
 				}
-				return Math.min(prev + Math.random() * 15, 99);
+				return Math.min(prev + Math.random() * 15, 95);
 			});
-		}, 400);
+		}, 600);
 
 		try {
 			const response = await fetch("/api/analyze", {
@@ -118,7 +118,7 @@ export default function Home() {
 				{/* Input Section */}
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 					<div>
-						<label className="block text-sm font-medium text-gray-300 mb-2">
+						<label className="block text-xl font-medium text-gray-300 mb-2">
 							Your Resume
 						</label>
 
@@ -146,7 +146,7 @@ export default function Home() {
 					</div>
 
 					<div>
-						<label className="block text-sm font-medium text-gray-300 mb-2">
+						<label className="block text-xl font-medium text-gray-300 mb-2">
 							Job Description
 						</label>
 						<textarea
@@ -171,7 +171,7 @@ export default function Home() {
 				{loading && (
 					<div className="mb-8">
 						<div className="flex justify-between text-xs text-gray-500 mb-1">
-							<span>Analyzing with Claude...</span>
+							<span>Analyzing your resume...</span>
 							<span>{Math.round(progress)}%</span>
 						</div>
 						<div className="w-full bg-gray-800 rounded-full h-1.5">
