@@ -1,5 +1,7 @@
 # AI Resume Analyzer
 
+[Check it out here!](https://ai-resume-analyzer-sigma-taupe.vercel.app/)
+
 An AI-powered full-stack web application that analyzes your resume against any job description and returns structured feedback — including a match score, strengths, gaps, and actionable suggestions — powered by the Anthropic Claude API.
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js) ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript) ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38bdf8?logo=tailwindcss) ![Anthropic](https://img.shields.io/badge/Anthropic-Claude-orange)
