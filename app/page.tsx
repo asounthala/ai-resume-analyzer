@@ -245,8 +245,8 @@ export default function Home() {
 								</h2>
 								<ul className="space-y-2">
 									{result.strengths.map((s, i) => (
-										<li key={i} className="text-gray-300 text-sm">
-											{"✅ " + s}
+										<li key={i} className="text-gray-300 text-sm border rounded-xl p-3 mb-6 bg-gray-800">
+											{s}
 										</li>
 									))}
 								</ul>
@@ -258,8 +258,8 @@ export default function Home() {
 								</h2>
 								<ul className="space-y-2">
 									{result.gaps.map((g, i) => (
-										<li key={i} className="text-gray-300 text-sm">
-											{"❌ " + g}
+										<li key={i} className="text-gray-300 text-sm border rounded-xl p-3 mb-6 bg-gray-800">
+											{g}
 										</li>
 									))}
 								</ul>
@@ -271,8 +271,8 @@ export default function Home() {
 								</h2>
 								<ul className="space-y-2">
 									{result.suggestions.map((s, i) => (
-										<li key={i} className="text-gray-300 text-sm">
-											{"→ " + s}
+										<li key={i} className="text-gray-300 text-sm border rounded-xl p-3 mb-6 bg-gray-800">
+											{s}
 										</li>
 									))}
 								</ul>
