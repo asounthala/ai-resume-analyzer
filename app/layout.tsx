@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${geistMono.variable} antialiased font-[family-name:var(--font-inter)]`}
+        className={`${inter.variable} ${geistMono.variable} antialiased font-(family-name:--font-inter)`}
       >
         {children}
       </body>

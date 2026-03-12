@@ -27,7 +27,8 @@ export async function POST(request: NextRequest) {
     "summary": "<2-3 sentence overall assessment>",
     "strengths": ["<strength 1>", "<strength 2>", "<strength 3>"],
     "gaps": ["<gap 1>", "<gap 2>", "<gap 3>"],
-    "suggestions": ["<suggestion 1>", "<suggestion 2>", "<suggestion 3>"]
+    "suggestions": ["<suggestion 1>", "<suggestion 2>", "<suggestion 3>"],
+    "keywords": "<an array containing the most important keywords that are in the job description but missing from the resume>"
     }
 
     JOB DESCRIPTION:

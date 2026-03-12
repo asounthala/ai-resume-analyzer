@@ -8,6 +8,7 @@ interface AnalysisResult {
 	strengths: string[];
 	gaps: string[];
 	suggestions: string[];
+	keywords: string[];
 }
 
 export default function Home() {
@@ -217,6 +218,23 @@ export default function Home() {
 								/>
 							</div>
 							<p className="text-gray-400 mt-4">{result.summary}</p>
+						</div>
+
+						{/* Missing Keywords */}
+						<div className="bg-gray-900 border border-gray-700 rounded-xl p-6">
+							<h2 className="text-lg font-semibold text-yellow-400 mb-4">
+								⚡ Missing Keywords
+							</h2>
+							<div className="flex flex-wrap gap-2">
+								{result.keywords.map((k, i) => (
+									<span
+										key={i}
+										className="bg-blue-400/30 border border-gray-600 text-gray-300 px-3 py-1 rounded-full text-sm font-bold"
+									>
+										{k}
+									</span>
+								))}
+							</div>
 						</div>
 
 						{/* Strengths, Gaps, Suggestions */}
