@@ -61,6 +61,7 @@ export default function Home() {
 		setResult(null);
 		setProgress(0);
 
+		// Simulate progress bar
 		const interval = setInterval(() => {
 			setProgress((prev) => {
 				if (prev >= 95) {
@@ -101,6 +102,7 @@ export default function Home() {
 		if (score >= 50) return "bg-yellow-400";
 		return "bg-red-400";
 	};
+
 	return (
 		<main className="min-h-screen bg-gray-900 text-gray-100 p-8">
 			<div className="max-w-4xl mx-auto">
@@ -144,7 +146,8 @@ export default function Home() {
 							className="hidden"
 						/>
 					</div>
-
+					
+					{/* Job Description Input */}
 					<div>
 						<label className="block text-xl font-medium text-gray-300 mb-2">
 							Job Description
