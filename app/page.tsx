@@ -109,10 +109,10 @@ export default function Home() {
 			<div className="max-w-4xl mx-auto">
 				{/* Header */}
 				<div className="mb-10">
-					<h1 className="text-4xl font-bold text-white mb-2">
+					<h1 className="text-4xl font-bold text-white mb-2 text-center">
 						AI Resume Analyzer
 					</h1>
-					<p className="text-gray-400">
+					<p className="text-gray-400 text-center">
 						Upload your resume. Paste the job description. Get instant feedback
 						on how well you match and how to improve!
 					</p>

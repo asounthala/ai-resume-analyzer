@@ -2,7 +2,7 @@
 
 [Check it out here!](https://ai-resume-analyzer-sigma-taupe.vercel.app/)
 
-An AI-powered full-stack web application that analyzes your resume against any job description and returns structured feedback — including a match score, strengths, gaps, and actionable suggestions — powered by the Anthropic Claude API.
+An AI-powered full-stack web application that analyzes your resume against any job description and returns structured feedback — including a match score, missing keywords, strengths, gaps, and actionable suggestions — powered by the Anthropic Claude API.
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js) ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript) ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38bdf8?logo=tailwindcss) ![Anthropic](https://img.shields.io/badge/Anthropic-Claude-orange)
 
@@ -13,7 +13,7 @@ An AI-powered full-stack web application that analyzes your resume against any j
 - **PDF & TXT Upload** — Upload your resume directly or paste it as plain text
 - **AI-Powered Analysis** — Uses Claude (claude-sonnet-4) to compare your resume against a job description
 - **Match Score** — Visual score out of 100 with a color-coded progress bar
-- **Structured Feedback** — Clearly organized strengths, gaps, and suggestions
+- **Structured Feedback** — Clearly organized keywords, strengths, gaps, and suggestions
 - **Animated Progress Bar** — Real-time loading feedback while Claude processes your request
 - **Secure API Handling** — Anthropic API key is kept server-side and never exposed to the client
 
@@ -94,7 +94,7 @@ resume-analyzer/
 2. **User pastes a job description** into the text area
 3. **Frontend sends both** to `/api/analyze` via a POST request
 4. **The API route constructs a prompt** and sends it to Claude with strict JSON output formatting instructions
-5. **Claude returns structured feedback** — match score, summary, strengths, gaps, and suggestions
+5. **Claude returns structured feedback** — match score, summary, missing keywords strengths, gaps, and suggestions
 6. **Results are displayed** in a clean, organized UI with color-coded scoring
 
 
